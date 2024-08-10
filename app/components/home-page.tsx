@@ -4,6 +4,7 @@ import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
 import { createDatabase } from "../lib/serverapi";
 import Image from "next/image";
+import { WobbleCard } from "./ui/wobble-card";
 
 export function HomePage() {
 
@@ -37,23 +38,29 @@ export function HomePage() {
         <div className=" w-full p-10 drop-shadow-lg bg-[#333] rounded">
          
           <div className="flex items-center justify-between gap-10 mb-4">
+
             {/* qr code */}
+            <WobbleCard >
+
+            
             <div className="w-[300px] h-[300px] relative">
               <Image src="/wal.png" alt="image of wallet" fill />
             </div>
+            </WobbleCard>
 
-
+            <WobbleCard > 
             <div className="w-[300px] h-[300px] relative">
               <Image src="/ghost-v1.webp" alt="ghost image" fill />
             </div>
+            </WobbleCard>
 
           </div>
 
 
           <ul>
               <li className="w-full flex flex-col mb-4">
-                <span className="text-2xl font-bold">ETH Address:</span>
-                <span className="text-gray-500">0x610aC7169092c2120f20B3b04d8452fa5a90c774</span>
+                <span className="text-5xl font-bold">ETH Address:</span>
+                <span className="text-gray-500 text-2xl">0x610aC7169092c2120f20B3b04d8452fa5a90c774</span>
               </li>
               <li className="w-full flex flex-col text-center">
                 <span>WBTC in ETH accepted</span>
