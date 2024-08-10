@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 interface SendMailProps {
   to: string;
-  name: string;
+  name: string;                      
   subject: string;
   content: string;
 } 
